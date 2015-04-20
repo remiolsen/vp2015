@@ -1,0 +1,11 @@
+checking tool consistency:
+/proj/a2010002/nobackup/sw/mf/bioinfo-tools/misc/trimmomatic/0.30/trimmomatic-0.30.jar
+/sw/apps/bioinfo/fastqc/0.10.1/milou/fastqc
+/sw/apps/bioinfo/abyss/1.3.5/milou/bin/
+all tools the pipeline is going to use appear properly installed.
+2014-10-16 15:48:34
+java -jar /proj/a2010002/nobackup/sw/mf/bioinfo-tools/misc/trimmomatic/0.30/trimmomatic-0.30.jar PE -threads 16 -phred33 /proj/a2012043/INBOX/V.Passoth_13/V.Passoth_13_03/P659_102_index4dual/130912_AH0TW4ADXX/1_130912_AH0TW4ADXX_P659_102_index4dual_1.fastq.gz /proj/a2012043/INBOX/V.Passoth_13/V.Passoth_13_03/P659_102_index4dual/130912_AH0TW4ADXX/1_130912_AH0TW4ADXX_P659_102_index4dual_2.fastq.gz /gulo/proj_nobackup/a2012043/private/projects/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/Trimmomatic/1_130912_AH0TW4ADXX_P659_102_index4dual_1.fastq.gz /gulo/proj_nobackup/a2012043/private/projects/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/Trimmomatic/1_130912_AH0TW4ADXX_P659_102_index4dual_1_u.fastq.gz /gulo/proj_nobackup/a2012043/private/projects/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/Trimmomatic/1_130912_AH0TW4ADXX_P659_102_index4dual_2.fastq.gz /gulo/proj_nobackup/a2012043/private/projects/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/Trimmomatic/1_130912_AH0TW4ADXX_P659_102_index4dual_2_u.fastq.gz ILLUMINACLIP:/home/remi/opt/de_novo_scilife/resources/nextera_linkers.txt:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:30
+2014-10-16 15:57:30
+/sw/apps/bioinfo/fastqc/0.10.1/milou/fastqc --threads 16 --outdir fastqc /gulo/proj_nobackup/a2012043/private/projects/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/Trimmomatic/1_130912_AH0TW4ADXX_P659_102_index4dual_1.fastq.gz /gulo/proj_nobackup/a2012043/private/projects/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/Trimmomatic/1_130912_AH0TW4ADXX_P659_102_index4dual_2.fastq.gz
+2014-10-16 16:01:44
+mpirun -np 16 /sw/apps/bioinfo/abyss/1.3.5/milou/bin/ABYSS-P -k 35 --coverage-hist=histogram.hist -o preUnitgs.fa /gulo/proj_nobackup/a2012043/private/projects/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/Trimmomatic/1_130912_AH0TW4ADXX_P659_102_index4dual_1.fastq.gz  /gulo/proj_nobackup/a2012043/private/projects/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/Trimmomatic/1_130912_AH0TW4ADXX_P659_102_index4dual_2.fastq.gz 

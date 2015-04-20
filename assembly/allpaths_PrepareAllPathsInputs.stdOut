@@ -1,0 +1,758 @@
+--------------------------------------------------------------------------------
+Oct 27 11:10:40 2014 run on localhost (pid=8551), last modified Apr 25 13:57:08 2014
+/sw/apps/bioinfo/allpathslg/49618/milou/bin/PrepareAllPathsInputs.pl           \
+                                                                               \
+    DATA_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir \
+    PLOIDY=2 PICARD_TOOLS_DIR=/sw/apps/bioinfo/picard/1.92/milou/              \
+    FORCE_PHRED=True PHRED_64=False 
+--------------------------------------------------------------------------------
+
+---- 2014-10-27 11:10:40 (PAPI): Creating cache directory '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache'
+---- 2014-10-27 11:10:40 (PAPI): Running on '/proj/a2012043/private/nobackup/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13'.
+--------------------------------------------------------------------------------
+Oct 27 11:10:40 2014 run on localhost (pid=8555), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/CacheLibs.pl                  \
+                                                                               \
+    CACHE_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache \
+    ACTION=Add IN_LIBS_CSV=in_libs.csv OVERWRITE=0 DRY_RUN=0 VERBOSE=1 
+--------------------------------------------------------------------------------
+
+---- 4 input libraries loaded from 'in_libs.csv':
+*************************************************************************************************************************************************************
+library_name, project_name, organism_name,     type, paired, frag_size, frag_stddev, insert_size, insert_stddev, read_orientation, genomic_start, genomic_end
+      lib180,       genome,        genome, fragment,      1,       180,          30,            ,              ,           inward,             0,           0
+      lib500,       genome,        genome, fragment,      1,       500,         120,            ,              ,           inward,             0,           0
+     lib3000,       genome,        genome, fragment,      1,          ,            ,        3000,           450,          outward,             0,           0
+     lib6000,       genome,        genome, fragment,      1,          ,            ,        6000,           900,          outward,             0,           0
+*************************************************************************************************************************************************************
+---- 2014-10-27 11:10:40 (CL): Merging input libraries with cache libraries.
+========================================================================================================
+library, organism, project,     type,   insert_size,   frag_size, pairing, genomic_range, status, action
+ lib180,   genome,  genome, fragment,              ,  180 +-  30,  inward, [   0 :   0 ],    NEW,    ADD
+ lib500,   genome,  genome, fragment,              ,  500 +- 120,  inward, [   0 :   0 ],    NEW,    ADD
+lib3000,   genome,  genome, fragment,  3000 +-  450,            , outward, [   0 :   0 ],    NEW,    ADD
+lib6000,   genome,  genome, fragment,  6000 +-  900,            , outward, [   0 :   0 ],    NEW,    ADD
+========================================================================================================
+---- 2014-10-27 11:10:40 (CL): 4 new libraries added to library database.
+---- 2014-10-27 11:10:40 (CL): 4 libraries updated in library database.
+--------------------------------------------------------------------------------
+Oct 27 11:10:40 2014 run on localhost (pid=8563), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/CacheGroups.pl                \
+    ACTION=Add PICARD_TOOLS_DIR=/sw/apps/bioinfo/picard/1.92/milou/            \
+    CACHE_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache \
+    IN_GROUPS_CSV=in_groups.csv INCLUDE_NON_PF_READS=1 PHRED_64=0              \
+    FORCE_PHRED=1 OVERWRITE=0 SAVE_INTERMEDIATES=0 TMP_DIR= HOSTS=             \
+    JAVA_MEM_GB=8 DRY_RUN=0 VERBOSE=1 
+--------------------------------------------------------------------------------
+
+---- 6 input groups loaded.
+---- 6 input groups loaded from 'in_groups.csv':
+*********************************************************************************************************************************************************************************************************
+group_name, library_name,                                                                                                                                                                       file_name
+       PE1,       lib180,         /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_?.fastq.gz
+       PE2,       lib500,         /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_trimmed/1_130912_AH0TW4ADXX_P658_101_dual88_?.fastq.gz
+       MP3,      lib3000, /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_101_index2dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_101_index2dual_?.fastq.gz
+       MP4,      lib3000, /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_102_index4dual_?.fastq.gz
+       MP5,      lib6000, /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_04/P660_102_index6dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P660_102_index6dual_?.fastq.gz
+       MP6,      lib6000, /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_04/P660_101_index5dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P660_101_index5dual_?.fastq.gz
+*********************************************************************************************************************************************************************************************************
+---- 0 cached groups loaded.
+---- 4 cached libraries loaded.
+---- Converting: group 'PE1' will be added to the database.
+---- Converting: group 'PE2' will be added to the database.
+---- Converting: group 'MP3' will be added to the database.
+---- Converting: group 'MP4' will be added to the database.
+---- Converting: group 'MP5' will be added to the database.
+---- Converting: group 'MP6' will be added to the database.
+--------------------------------------------------------------------------------
+---- 2014-10-27 11:10:40 (CG): Importing group 'PE1'.
+--------------------------------------------------------------------------------
+Oct 27 11:10:40 2014 run on localhost (pid=8572), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/ConvertToFastbQualb.pl        \
+    PICARD_TOOLS_DIR=/sw/apps/bioinfo/picard/1.92/milou/                       \
+    TMP_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/picard_tmp \
+    DATA_FILE=/proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_?.fastq.gz \
+    PAIRED=1                                                                   \
+    OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/PE1 \
+    REVERSE_READS=False TRIM_START=0 TRIM_END=0 INCLUDE_NON_PF_READS=1         \
+    PHRED_64=0 FORCE_PHRED=1 REVERT_SAM=0 OVERWRITE=0 SAVE_COMPRESSED_FASTQ=0  \
+    SAVE_INTERMEDIATES=0 JAVA_MEM_GB=8 DRY_RUN=0 VERBOSE=1 
+--------------------------------------------------------------------------------
+
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:10:40 2014 run on m121, pid=8575  [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_t \
+                  rimmed/1_130912_AH0TW4ADXX_P568_101_dual87_1.fastq.gz        \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/PE1.tmp/0 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:13:11 2014 (FTFQ):       37648797  reads in fastq file.
+mån okt 27 11:13:11 2014 (FTFQ):       37648797  reads in fastb/qualb files.
+mån okt 27 11:13:11 2014 (FTFQ):     0.00140433  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:13:11 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:13:11 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:13:11 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:13:11 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:13:13 2014 run on m121, pid=8587  [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_t \
+                  rimmed/1_130912_AH0TW4ADXX_P568_101_dual87_2.fastq.gz        \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/PE1.tmp/1 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:16:13 2014 (FTFQ):       37648797  reads in fastq file.
+mån okt 27 11:16:13 2014 (FTFQ):       37648797  reads in fastb/qualb files.
+mån okt 27 11:16:13 2014 (FTFQ):     0.00022081  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:16:13 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:16:13 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:16:13 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:16:13 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:16:15 2014 run on m121, pid=8822  [Apr 25 2014 13:19:39 R49618 ]
+MergePairedFastbs                                                              \
+                  HEAD1_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/PE1.tmp/0                                           \
+                  HEAD2_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/PE1.tmp/1                                           \
+                  HEAD_OUT=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/PE1.tmp/all NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:16:15 2014 (MPF): Merging.
+mån okt 27 11:18:13 2014 (MPF): Merged 37648797 read pairs.
+mån okt 27 11:18:13 2014 (MPF): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:18:14 2014 run on m121, pid=8824  [Apr 25 2014 13:19:39 R49618 ]
+FastbQualbTrimReverse                                                          \
+                      IN_HEAD=/gulo/proj_nobackup/a2012043/private/projects/de \
+                      novo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data \
+                      _dir/read_cache/PE1.tmp/all                              \
+                      OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/d \
+                      enovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/dat \
+                      a_dir/read_cache/PE1 TRIM_START=0 TRIM_END=0             \
+                      REVERSE=False NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:18:14 2014 (FQTR): Trimming bases to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/PE1.fastb'.
+mån okt 27 11:19:01 2014 (FQTR): Trimming quals to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/PE1.qualb'.
+mån okt 27 11:20:21 2014 (FQTR): Done.
+---- 2014-10-27 11:21:43 (CG): Importing group 'PE2'.
+--------------------------------------------------------------------------------
+Oct 27 11:21:43 2014 run on localhost (pid=8867), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/ConvertToFastbQualb.pl        \
+    PICARD_TOOLS_DIR=/sw/apps/bioinfo/picard/1.92/milou/                       \
+    TMP_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/picard_tmp \
+    DATA_FILE=/proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_trimmed/1_130912_AH0TW4ADXX_P658_101_dual88_?.fastq.gz \
+    PAIRED=1                                                                   \
+    OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/PE2 \
+    REVERSE_READS=False TRIM_START=0 TRIM_END=0 INCLUDE_NON_PF_READS=1         \
+    PHRED_64=0 FORCE_PHRED=1 REVERT_SAM=0 OVERWRITE=0 SAVE_COMPRESSED_FASTQ=0  \
+    SAVE_INTERMEDIATES=0 JAVA_MEM_GB=8 DRY_RUN=0 VERBOSE=1 
+--------------------------------------------------------------------------------
+
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:21:43 2014 run on m121, pid=8870  [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_t \
+                  rimmed/1_130912_AH0TW4ADXX_P658_101_dual88_1.fastq.gz        \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/PE2.tmp/0 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:22:53 2014 (FTFQ):       16522358  reads in fastq file.
+mån okt 27 11:22:53 2014 (FTFQ):       16522358  reads in fastb/qualb files.
+mån okt 27 11:22:53 2014 (FTFQ):      0.0012497  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:22:53 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:22:53 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:22:53 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:22:53 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:22:54 2014 run on m121, pid=8873  [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_t \
+                  rimmed/1_130912_AH0TW4ADXX_P658_101_dual88_2.fastq.gz        \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/PE2.tmp/1 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:23:58 2014 (FTFQ):       16522358  reads in fastq file.
+mån okt 27 11:23:58 2014 (FTFQ):       16522358  reads in fastb/qualb files.
+mån okt 27 11:23:58 2014 (FTFQ):    0.000164305  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:23:58 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:23:58 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:23:58 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:23:58 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:23:59 2014 run on m121, pid=8894  [Apr 25 2014 13:19:39 R49618 ]
+MergePairedFastbs                                                              \
+                  HEAD1_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/PE2.tmp/0                                           \
+                  HEAD2_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/PE2.tmp/1                                           \
+                  HEAD_OUT=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/PE2.tmp/all NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:23:59 2014 (MPF): Merging.
+mån okt 27 11:24:54 2014 (MPF): Merged 16522358 read pairs.
+mån okt 27 11:24:54 2014 (MPF): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:24:54 2014 run on m121, pid=8896  [Apr 25 2014 13:19:39 R49618 ]
+FastbQualbTrimReverse                                                          \
+                      IN_HEAD=/gulo/proj_nobackup/a2012043/private/projects/de \
+                      novo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data \
+                      _dir/read_cache/PE2.tmp/all                              \
+                      OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/d \
+                      enovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/dat \
+                      a_dir/read_cache/PE2 TRIM_START=0 TRIM_END=0             \
+                      REVERSE=False NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:24:54 2014 (FQTR): Trimming bases to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/PE2.fastb'.
+mån okt 27 11:25:12 2014 (FQTR): Trimming quals to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/PE2.qualb'.
+mån okt 27 11:25:46 2014 (FQTR): Done.
+---- 2014-10-27 11:26:24 (CG): Importing group 'MP3'.
+--------------------------------------------------------------------------------
+Oct 27 11:26:24 2014 run on localhost (pid=8918), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/ConvertToFastbQualb.pl        \
+    PICARD_TOOLS_DIR=/sw/apps/bioinfo/picard/1.92/milou/                       \
+    TMP_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/picard_tmp \
+    DATA_FILE=/proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_101_index2dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_101_index2dual_?.fastq.gz \
+    PAIRED=1                                                                   \
+    OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP3 \
+    REVERSE_READS=True TRIM_START=0 TRIM_END=0 INCLUDE_NON_PF_READS=1          \
+    PHRED_64=0 FORCE_PHRED=1 REVERT_SAM=0 OVERWRITE=0 SAVE_COMPRESSED_FASTQ=0  \
+    SAVE_INTERMEDIATES=0 JAVA_MEM_GB=8 DRY_RUN=0 VERBOSE=1 
+--------------------------------------------------------------------------------
+
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:26:24 2014 run on m121, pid=8923  [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_03/P659_101_index2dual/results/fas \
+                  tq_trimmed/1_130912_AH0TW4ADXX_P659_101_index2dual_1.fastq.g \
+                  z                                                            \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP3.tmp/0 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:27:21 2014 (FTFQ):       14002583  reads in fastq file.
+mån okt 27 11:27:21 2014 (FTFQ):       14002583  reads in fastb/qualb files.
+mån okt 27 11:27:21 2014 (FTFQ):     0.00144822  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:27:21 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:27:21 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:27:21 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:27:21 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:27:22 2014 run on m121, pid=8926  [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_03/P659_101_index2dual/results/fas \
+                  tq_trimmed/1_130912_AH0TW4ADXX_P659_101_index2dual_2.fastq.g \
+                  z                                                            \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP3.tmp/1 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:28:15 2014 (FTFQ):       14002583  reads in fastq file.
+mån okt 27 11:28:15 2014 (FTFQ):       14002583  reads in fastb/qualb files.
+mån okt 27 11:28:15 2014 (FTFQ):    0.000206558  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:28:15 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:28:15 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:28:15 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:28:15 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:28:16 2014 run on m121, pid=8929  [Apr 25 2014 13:19:39 R49618 ]
+MergePairedFastbs                                                              \
+                  HEAD1_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP3.tmp/0                                           \
+                  HEAD2_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP3.tmp/1                                           \
+                  HEAD_OUT=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP3.tmp/all NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:28:16 2014 (MPF): Merging.
+mån okt 27 11:28:57 2014 (MPF): Merged 14002583 read pairs.
+mån okt 27 11:28:57 2014 (MPF): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:28:57 2014 run on m121, pid=8949  [Apr 25 2014 13:19:39 R49618 ]
+FastbQualbTrimReverse                                                          \
+                      IN_HEAD=/gulo/proj_nobackup/a2012043/private/projects/de \
+                      novo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data \
+                      _dir/read_cache/MP3.tmp/all                              \
+                      OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/d \
+                      enovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/dat \
+                      a_dir/read_cache/MP3 TRIM_START=0 TRIM_END=0             \
+                      REVERSE=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:28:57 2014 (FQTR): Trimming bases to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP3.fastb'.
+mån okt 27 11:29:20 2014 (FQTR): Trimming quals to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP3.qualb'.
+mån okt 27 11:29:53 2014 (FQTR): Done.
+---- 2014-10-27 11:30:21 (CG): Importing group 'MP4'.
+--------------------------------------------------------------------------------
+Oct 27 11:30:21 2014 run on localhost (pid=9355), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/ConvertToFastbQualb.pl        \
+    PICARD_TOOLS_DIR=/sw/apps/bioinfo/picard/1.92/milou/                       \
+    TMP_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/picard_tmp \
+    DATA_FILE=/proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_102_index4dual_?.fastq.gz \
+    PAIRED=1                                                                   \
+    OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP4 \
+    REVERSE_READS=True TRIM_START=0 TRIM_END=0 INCLUDE_NON_PF_READS=1          \
+    PHRED_64=0 FORCE_PHRED=1 REVERT_SAM=0 OVERWRITE=0 SAVE_COMPRESSED_FASTQ=0  \
+    SAVE_INTERMEDIATES=0 JAVA_MEM_GB=8 DRY_RUN=0 VERBOSE=1 
+--------------------------------------------------------------------------------
+
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:30:21 2014 run on m121, pid=9360  [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/results/fas \
+                  tq_trimmed/1_130912_AH0TW4ADXX_P659_102_index4dual_1.fastq.g \
+                  z                                                            \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP4.tmp/0 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:31:22 2014 (FTFQ):       15899162  reads in fastq file.
+mån okt 27 11:31:22 2014 (FTFQ):       15899162  reads in fastb/qualb files.
+mån okt 27 11:31:22 2014 (FTFQ):     0.00144035  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:31:22 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:31:22 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:31:22 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:31:22 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:31:23 2014 run on m121, pid=9606  [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/results/fas \
+                  tq_trimmed/1_130912_AH0TW4ADXX_P659_102_index4dual_2.fastq.g \
+                  z                                                            \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP4.tmp/1 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:32:26 2014 (FTFQ):       15899162  reads in fastq file.
+mån okt 27 11:32:26 2014 (FTFQ):       15899162  reads in fastb/qualb files.
+mån okt 27 11:32:26 2014 (FTFQ):    0.000213148  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:32:26 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:32:26 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:32:26 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:32:26 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:32:27 2014 run on m121, pid=9920  [Apr 25 2014 13:19:39 R49618 ]
+MergePairedFastbs                                                              \
+                  HEAD1_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP4.tmp/0                                           \
+                  HEAD2_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP4.tmp/1                                           \
+                  HEAD_OUT=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP4.tmp/all NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:32:27 2014 (MPF): Merging.
+mån okt 27 11:33:21 2014 (MPF): Merged 15899162 read pairs.
+mån okt 27 11:33:21 2014 (MPF): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:33:21 2014 run on m121, pid=9988  [Apr 25 2014 13:19:39 R49618 ]
+FastbQualbTrimReverse                                                          \
+                      IN_HEAD=/gulo/proj_nobackup/a2012043/private/projects/de \
+                      novo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data \
+                      _dir/read_cache/MP4.tmp/all                              \
+                      OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/d \
+                      enovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/dat \
+                      a_dir/read_cache/MP4 TRIM_START=0 TRIM_END=0             \
+                      REVERSE=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:33:21 2014 (FQTR): Trimming bases to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP4.fastb'.
+mån okt 27 11:33:47 2014 (FQTR): Trimming quals to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP4.qualb'.
+mån okt 27 11:34:20 2014 (FQTR): Done.
+---- 2014-10-27 11:34:52 (CG): Importing group 'MP5'.
+--------------------------------------------------------------------------------
+Oct 27 11:34:52 2014 run on localhost (pid=10339), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/ConvertToFastbQualb.pl        \
+    PICARD_TOOLS_DIR=/sw/apps/bioinfo/picard/1.92/milou/                       \
+    TMP_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/picard_tmp \
+    DATA_FILE=/proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_04/P660_102_index6dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P660_102_index6dual_?.fastq.gz \
+    PAIRED=1                                                                   \
+    OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP5 \
+    REVERSE_READS=True TRIM_START=0 TRIM_END=0 INCLUDE_NON_PF_READS=1          \
+    PHRED_64=0 FORCE_PHRED=1 REVERT_SAM=0 OVERWRITE=0 SAVE_COMPRESSED_FASTQ=0  \
+    SAVE_INTERMEDIATES=0 JAVA_MEM_GB=8 DRY_RUN=0 VERBOSE=1 
+--------------------------------------------------------------------------------
+
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:34:53 2014 run on m121, pid=10344 [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_04/P660_102_index6dual/results/fas \
+                  tq_trimmed/1_130912_AH0TW4ADXX_P660_102_index6dual_1.fastq.g \
+                  z                                                            \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP5.tmp/0 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:34:58 2014 (FTFQ):        1345418  reads in fastq file.
+mån okt 27 11:34:58 2014 (FTFQ):        1345418  reads in fastb/qualb files.
+mån okt 27 11:34:58 2014 (FTFQ):      0.0014088  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:34:58 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:34:58 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:34:58 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:34:58 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:34:58 2014 run on m121, pid=10366 [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_04/P660_102_index6dual/results/fas \
+                  tq_trimmed/1_130912_AH0TW4ADXX_P660_102_index6dual_2.fastq.g \
+                  z                                                            \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP5.tmp/1 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:35:03 2014 (FTFQ):        1345418  reads in fastq file.
+mån okt 27 11:35:03 2014 (FTFQ):        1345418  reads in fastb/qualb files.
+mån okt 27 11:35:03 2014 (FTFQ):    0.000202751  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:35:03 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:35:03 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:35:03 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:35:03 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:35:03 2014 run on m121, pid=10382 [Apr 25 2014 13:19:39 R49618 ]
+MergePairedFastbs                                                              \
+                  HEAD1_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP5.tmp/0                                           \
+                  HEAD2_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP5.tmp/1                                           \
+                  HEAD_OUT=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP5.tmp/all NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:35:03 2014 (MPF): Merging.
+mån okt 27 11:35:07 2014 (MPF): Merged 1345418 read pairs.
+mån okt 27 11:35:07 2014 (MPF): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:35:08 2014 run on m121, pid=10387 [Apr 25 2014 13:19:39 R49618 ]
+FastbQualbTrimReverse                                                          \
+                      IN_HEAD=/gulo/proj_nobackup/a2012043/private/projects/de \
+                      novo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data \
+                      _dir/read_cache/MP5.tmp/all                              \
+                      OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/d \
+                      enovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/dat \
+                      a_dir/read_cache/MP5 TRIM_START=0 TRIM_END=0             \
+                      REVERSE=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:35:08 2014 (FQTR): Trimming bases to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP5.fastb'.
+mån okt 27 11:35:10 2014 (FQTR): Trimming quals to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP5.qualb'.
+mån okt 27 11:35:13 2014 (FQTR): Done.
+---- 2014-10-27 11:35:16 (CG): Importing group 'MP6'.
+--------------------------------------------------------------------------------
+Oct 27 11:35:16 2014 run on localhost (pid=10399), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/ConvertToFastbQualb.pl        \
+    PICARD_TOOLS_DIR=/sw/apps/bioinfo/picard/1.92/milou/                       \
+    TMP_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/picard_tmp \
+    DATA_FILE=/proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_04/P660_101_index5dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P660_101_index5dual_?.fastq.gz \
+    PAIRED=1                                                                   \
+    OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP6 \
+    REVERSE_READS=True TRIM_START=0 TRIM_END=0 INCLUDE_NON_PF_READS=1          \
+    PHRED_64=0 FORCE_PHRED=1 REVERT_SAM=0 OVERWRITE=0 SAVE_COMPRESSED_FASTQ=0  \
+    SAVE_INTERMEDIATES=0 JAVA_MEM_GB=8 DRY_RUN=0 VERBOSE=1 
+--------------------------------------------------------------------------------
+
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:35:17 2014 run on m121, pid=10402 [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_04/P660_101_index5dual/results/fas \
+                  tq_trimmed/1_130912_AH0TW4ADXX_P660_101_index5dual_1.fastq.g \
+                  z                                                            \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP6.tmp/0 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:36:11 2014 (FTFQ):       14864953  reads in fastq file.
+mån okt 27 11:36:11 2014 (FTFQ):       14864953  reads in fastb/qualb files.
+mån okt 27 11:36:11 2014 (FTFQ):     0.00146115  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:36:11 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:36:11 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:36:11 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:36:11 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:36:12 2014 run on m121, pid=10406 [Apr 25 2014 13:19:39 R49618 ]
+FastqToFastbQualb                                                              \
+                  FASTQ=/proj/a2012043/nobackup/private/projects/denovo/V.Pass \
+                  oth_13/01-QC/V.Passoth_13_04/P660_101_index5dual/results/fas \
+                  tq_trimmed/1_130912_AH0TW4ADXX_P660_101_index5dual_2.fastq.g \
+                  z                                                            \
+                  OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP6.tmp/1 PHRED_64=False FORCE_PHRED=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:37:07 2014 (FTFQ):       14864953  reads in fastq file.
+mån okt 27 11:37:07 2014 (FTFQ):       14864953  reads in fastb/qualb files.
+mån okt 27 11:37:07 2014 (FTFQ):    0.000204821  % base errors due to ambiguities (all 'N' would yield 75%).
+mån okt 27 11:37:07 2014 (FTFQ):      PHRED +33  quality score encoding. Score set to Q0 if fastq score is negative.
+mån okt 27 11:37:07 2014 (FTFQ):              2  lowest quality score.
+mån okt 27 11:37:07 2014 (FTFQ):             40  highest quality score.
+mån okt 27 11:37:07 2014 (FTFQ): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:37:08 2014 run on m121, pid=10410 [Apr 25 2014 13:19:39 R49618 ]
+MergePairedFastbs                                                              \
+                  HEAD1_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP6.tmp/0                                           \
+                  HEAD2_IN=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP6.tmp/1                                           \
+                  HEAD_OUT=/gulo/proj_nobackup/a2012043/private/projects/denov \
+                  o/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/re \
+                  ad_cache/MP6.tmp/all NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:37:08 2014 (MPF): Merging.
+mån okt 27 11:37:53 2014 (MPF): Merged 14864953 read pairs.
+mån okt 27 11:37:53 2014 (MPF): Done.
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:37:53 2014 run on m121, pid=10412 [Apr 25 2014 13:19:39 R49618 ]
+FastbQualbTrimReverse                                                          \
+                      IN_HEAD=/gulo/proj_nobackup/a2012043/private/projects/de \
+                      novo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data \
+                      _dir/read_cache/MP6.tmp/all                              \
+                      OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/d \
+                      enovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/dat \
+                      a_dir/read_cache/MP6 TRIM_START=0 TRIM_END=0             \
+                      REVERSE=True NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:37:53 2014 (FQTR): Trimming bases to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP6.fastb'.
+mån okt 27 11:38:16 2014 (FQTR): Trimming quals to '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache/MP6.qualb'.
+mån okt 27 11:38:44 2014 (FQTR): Done.
+---- 2014-10-27 11:39:15 (CG): Final size of groups database:  6
+===========================================================================================================================================
+group, library, organism, project,     type,   insert_size,   frag_size,   pairing, genomic_range, status, revert_sam, action,        notes
+  PE1,  lib180,   genome,  genome, fragment,              ,  180 +-  30, in (!rev), [   0 :   0 ],    NEW,         no,    ADD, [db updated]
+  PE2,  lib500,   genome,  genome, fragment,              ,  500 +- 120, in (!rev), [   0 :   0 ],    NEW,         no,    ADD, [db updated]
+  MP3, lib3000,   genome,  genome, fragment,  3000 +-  450,            , out (rev), [   0 :   0 ],    NEW,         no,    ADD, [db updated]
+  MP4, lib3000,   genome,  genome, fragment,  3000 +-  450,            , out (rev), [   0 :   0 ],    NEW,         no,    ADD, [db updated]
+  MP5, lib6000,   genome,  genome, fragment,  6000 +-  900,            , out (rev), [   0 :   0 ],    NEW,         no,    ADD, [db updated]
+  MP6, lib6000,   genome,  genome, fragment,  6000 +-  900,            , out (rev), [   0 :   0 ],    NEW,         no,    ADD, [db updated]
+===========================================================================================================================================
+--------------------------------------------------------------------------------
+Oct 27 11:39:15 2014 run on localhost (pid=10440), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/CacheToAllPathsInputs.pl      \
+                                                                               \
+    CACHE_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache \
+    PLOIDY=2 IN_GROUPS_CSV=in_groups.csv                                       \
+    DATA_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir \
+    GENOME_SIZE= FRAG_COVERAGE= FRAG_FRAC= JUMP_COVERAGE= JUMP_FRAC=           \
+    LONG_JUMP_COVERAGE= LONG_JUMP_FRAC= LONG_JUMP_MIN_SIZE=20000               \
+    LONG_READ_COVERAGE= LONG_READ_FRAC= LONG_READ_MIN_LEN=500 DRY_RUN=0        \
+    VERBOSE=1 
+--------------------------------------------------------------------------------
+
+---- 2014-10-27 11:39:15 (CTAPI): 6 groups loaded from the cache.
+---- 2014-10-27 11:39:15 (CTAPI): 4 libraries loaded from the cache.
+--------------------------------------------------------------------------------
+Oct 27 11:39:15 2014 run on localhost (pid=10441), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/CacheToReads.pl               \
+                                                                               \
+    CACHE_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache \
+    GROUPS="{PE1,PE2}" FRACTIONS="{1,1}"                                       \
+    OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/frag_reads_orig \
+    DRY_RUN=0 VERBOSE=1 
+--------------------------------------------------------------------------------
+
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:39:15 2014 run on m121, pid=10442 [Apr 25 2014 13:19:39 R49618 ]
+CacheReadsMerge                                                                \
+                CACHE_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo \
+                /V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_ \
+                cache GROUP_HEADS="{PE1,PE2}"                                  \
+                GROUP_LIB_NAMES="{lib180,lib500}" GROUP_LIB_PAIRED="{1,1}"     \
+                GROUP_LIB_SIZES="{180,500}" GROUP_LIB_STDDEVS="{30,120}"       \
+                GROUP_READ_SIZES="{99.3,97.3}" GROUP_FRACS="{1,1}"             \
+                OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denovo/ \
+                V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/frag_r \
+                eads_orig NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:39:15 2014 (CRM): Starting merge of fastb/qualb files from all groups...
+mån okt 27 11:39:15 2014 (CRM): Merging read set into '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/frag_reads_orig.{fastb,qualb}'.
+mån okt 27 11:41:19 2014 (CRM):    108342310  reads in.
+mån okt 27 11:41:19 2014 (CRM):    108342310  reads out.
+mån okt 27 11:41:19 2014 (CRM):        100.0  % of reads included.
+mån okt 27 11:41:19 2014 (CRM): Creating PairsManager.
+mån okt 27 11:41:26 2014 (CRM): Library statistics:
+
+lib_name  lib_ID  sep  dev  n_reads
+--------  ------  ---  ---  -------
+lib180         0  -18   30  75297594
+lib500         1  306  120  33044716
+
+
+mån okt 27 11:41:27 2014 (CRM): : Done!
+
+--------------------------------------------------------------------------------
+Oct 27 11:41:27 2014 run on localhost (pid=10455), last modified Apr 25 13:57:08 2014
+/pica/sw/apps/bioinfo/allpathslg/49618/milou/bin/CacheToReads.pl               \
+                                                                               \
+    CACHE_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_cache \
+    GROUPS="{MP3,MP4,MP5,MP6}" FRACTIONS="{1,1,1,1}"                           \
+    OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/jump_reads_orig \
+    DRY_RUN=0 VERBOSE=1 
+--------------------------------------------------------------------------------
+
+Performing re-exec to adjust stack size.
+
+--------------------------------------------------------------------------------
+mån okt 27 11:41:27 2014 run on m121, pid=10456 [Apr 25 2014 13:19:39 R49618 ]
+CacheReadsMerge                                                                \
+                CACHE_DIR=/gulo/proj_nobackup/a2012043/private/projects/denovo \
+                /V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/read_ \
+                cache GROUP_HEADS="{MP3,MP4,MP5,MP6}"                          \
+                GROUP_LIB_NAMES="{lib3000,lib3000,lib6000,lib6000}"            \
+                GROUP_LIB_PAIRED="{1,1,1,1}"                                   \
+                GROUP_LIB_SIZES="{3000,3000,6000,6000}"                        \
+                GROUP_LIB_STDDEVS="{450,450,900,900}"                          \
+                GROUP_READ_SIZES="{83.4,82.3,82.7,82.0}"                       \
+                GROUP_FRACS="{1,1,1,1}"                                        \
+                OUT_HEAD=/gulo/proj_nobackup/a2012043/private/projects/denovo/ \
+                V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/jump_r \
+                eads_orig NH=False
+--------------------------------------------------------------------------------
+
+mån okt 27 11:41:27 2014 (CRM): Starting merge of fastb/qualb files from all groups...
+mån okt 27 11:41:27 2014 (CRM): Merging read set into '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/jump_reads_orig.{fastb,qualb}'.
+mån okt 27 11:43:00 2014 (CRM):     92224232  reads in.
+mån okt 27 11:43:00 2014 (CRM):     92224232  reads out.
+mån okt 27 11:43:00 2014 (CRM):        100.0  % of reads included.
+mån okt 27 11:43:00 2014 (CRM): Creating PairsManager.
+mån okt 27 11:43:06 2014 (CRM): Library statistics:
+
+lib_name  lib_ID   sep  dev  n_reads
+--------  ------   ---  ---  -------
+lib3000        0  2836  450  59803490
+lib6000        1  5836  900  32420742
+
+
+mån okt 27 11:43:06 2014 (CRM): : Done!
+
+========================================================================================================================================================
+group, library,     type,      prefix_out, reads_in, fraction, reads_out, coverage, phys_cov, pairing,  library_size, overlap, min_mean_max_len, mean_Qs
+  PE1,  lib180, fragment, frag_reads_orig, 75297594,  100.0 %,  75297594,        -,        -,  inward,   180 +-   30,    73 %, [  30   99  101], (37 37)
+  PE2,  lib500, fragment, frag_reads_orig, 33044716,  100.0 %,  33044716,        -,        -,  inward,   500 +-  120,     1 %, [  30   97  101], (36 36)
+  MP3, lib3000, fragment, jump_reads_orig, 28005166,  100.0 %,  28005166,        -,        -, outward,  3000 +-  450,        , [  30   83  101], (37 36)
+  MP4, lib3000, fragment, jump_reads_orig, 31798324,  100.0 %,  31798324,        -,        -, outward,  3000 +-  450,        , [  30   82  101], (37 36)
+  MP5, lib6000, fragment, jump_reads_orig,  2690836,  100.0 %,   2690836,        -,        -, outward,  6000 +-  900,        , [  30   82  101], (37 36)
+  MP6, lib6000, fragment, jump_reads_orig, 29729906,  100.0 %,  29729906,        -,        -, outward,  6000 +-  900,        , [  30   82  101], (37 36)
+========================================================================================================================================================
+==============================================================================================================================
+     prefix_out, n_groups, n_libraries,  reads_in, fraction, reads_out, coverage, phys_cov, overlap, min_mean_max_len, mean_Qs
+frag_reads_orig,        2,           2, 108342310,  100.0 %, 108342310,        -,        -,    51 %, [  30   98  101], (37 36)
+jump_reads_orig,        4,           2,  92224232,  100.0 %,  92224232,        -,        -,        , [  30   82  101], (37 36)
+==============================================================================================================================
+
+==================== WARNINGS ====================
+
+!!!! No 'long_jump' cached read groups found.
+     Long jumping reads (typically 40 kb, < 1x coverage) are useful only for scaffolding of vertebrate size genomes, and are not required for an assembly.
+
+
+!!!! No 'long' cached read groups found.
+     Long reads (typically, unpaired, 1 kb, 50x coverage) are useful only for gap patching of relatively small genomes, and are not required for an assembly.
+
+==================================================
+
+---- 2014-10-27 11:43:06 (CTAPI): Creating '/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths/data_dir/ploidy' with PLOIDY = 2.
+---- 2014-10-27 11:43:06 (CTAPI): Done.
+
+---- 2014-10-27 11:43:06 (PAPI): Done.
+

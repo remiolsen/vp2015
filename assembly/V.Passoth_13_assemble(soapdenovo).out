@@ -1,0 +1,17 @@
+checking tool consistency:
+/sw/apps/bioinfo/allpathslg/49618/milou/bin/
+/sw/apps/bioinfo/abyss/1.3.5/milou/bin/
+/sw/apps/bioinfo/SOAPdenovo/2.04-r240/milou/bin/SOAPdenovo-63mer
+/sw/apps/bioinfo/spades/3.1.1/milou/bin/spades.py
+/sw/apps/bioinfo/MaSuRCA/2.3.2/milou/
+all tools the pipeline is going to use appear properly installed.
+done (/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths folder already present, assumed already run)
+Assembler allpaths asumer already computed as folder                 /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/allpaths exists
+done (/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/abyss folder already present, assumed already run)
+Assembler abyss asumer already computed as folder                 /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/abyss exists
+2015-01-09 14:27:10
+/sw/apps/bioinfo/SOAPdenovo/2.04-r240/milou/bin/SOAPdenovo-63mer all -s ../configuration.txt -K 60 -L 500 -o soapAssembly -p 16
+done (/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/spades folder already present, assumed already run)
+Assembler spades asumer already computed as folder                 /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/spades exists
+done (/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/masurca folder already present, assumed already run)
+Assembler masurca asumer already computed as folder                 /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/03-assembly/V.Passoth_13/masurca exists

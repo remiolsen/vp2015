@@ -1,0 +1,38 @@
+checking tool consistency:
+/proj/a2010002/nobackup/sw/mf/bioinfo-tools/misc/qaTools/qaCompute
+/proj/a2010002/nobackup/sw/mf/bioinfo-tools/misc/FRC_align/bin/FRC
+/sw/apps/bioinfo/bwa/0.7.4/milou/bin/bwa
+/sw/apps/bioinfo/samtools/0.1.19/milou/bin/samtools
+all tools the pipeline is going to use appear properly installed.
+2015-02-23 14:43:49
+/sw/apps/bioinfo/bwa/0.7.4/milou/bin/bwa index /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/reference/bwa/V.Passoth_13.scf.fasta
+2015-02-23 14:44:00
+/sw/apps/bioinfo/bwa/0.7.4/milou/bin/bwa mem -M -t 16 /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/reference/bwa/V.Passoth_13.scf.fasta /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_2.fastq.gz | /sw/apps/bioinfo/samtools/0.1.19/milou/bin/samtools view -b -S -u - > 1_130912_AH0TW4ADXX_P568_101_dual87_to_V.Passoth_13.scf.unsorted.bam
+2015-02-23 14:53:56
+/sw/apps/bioinfo/samtools/0.1.19/milou/bin/samtools sort -@ 16 -m 1G 1_130912_AH0TW4ADXX_P568_101_dual87_to_V.Passoth_13.scf.unsorted.bam 1_130912_AH0TW4ADXX_P568_101_dual87_to_V.Passoth_13.scf
+2015-02-23 14:59:02
+/sw/apps/bioinfo/bwa/0.7.4/milou/bin/bwa mem -M -t 16 /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/reference/bwa/V.Passoth_13.scf.fasta /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_101_index2dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_101_index2dual_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_101_index2dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_101_index2dual_2.fastq.gz | /sw/apps/bioinfo/samtools/0.1.19/milou/bin/samtools view -b -S -u - > 1_130912_AH0TW4ADXX_P659_101_index2dual_to_V.Passoth_13.scf.unsorted.bam
+2015-02-23 15:03:59
+/sw/apps/bioinfo/samtools/0.1.19/milou/bin/samtools sort -@ 16 -m 1G 1_130912_AH0TW4ADXX_P659_101_index2dual_to_V.Passoth_13.scf.unsorted.bam 1_130912_AH0TW4ADXX_P659_101_index2dual_to_V.Passoth_13.scf
+2015-02-23 15:05:32
+/sw/apps/bioinfo/bwa/0.7.4/milou/bin/bwa mem -M -t 16 /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/reference/bwa/V.Passoth_13.scf.fasta /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_102_index4dual_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_102_index4dual_2.fastq.gz | /sw/apps/bioinfo/samtools/0.1.19/milou/bin/samtools view -b -S -u - > 1_130912_AH0TW4ADXX_P659_102_index4dual_to_V.Passoth_13.scf.unsorted.bam
+2015-02-23 15:10:56
+/sw/apps/bioinfo/samtools/0.1.19/milou/bin/samtools sort -@ 16 -m 1G 1_130912_AH0TW4ADXX_P659_102_index4dual_to_V.Passoth_13.scf.unsorted.bam 1_130912_AH0TW4ADXX_P659_102_index4dual_to_V.Passoth_13.scf
+2015-02-23 15:12:42
+/sw/apps/bioinfo/samtools/0.1.19/milou/bin/samtools merge lib_3000.bam /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/1_130912_AH0TW4ADXX_P659_101_index2dual/1_130912_AH0TW4ADXX_P659_101_index2dual_to_V.Passoth_13.scf.bam /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/1_130912_AH0TW4ADXX_P659_102_index4dual/1_130912_AH0TW4ADXX_P659_102_index4dual_to_V.Passoth_13.scf.bam
+2015-02-23 15:26:33
+java -Xmx16g -XX:PermSize=2g -jar /sw/apps/bioinfo/picard/1.92/milou/CollectGcBiasMetrics.jar REFERENCE_SEQUENCE=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/reference/V.Passoth_13.scf.fasta INPUT=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/lib_180/lib_180.bam OUTPUT=lib_180.collectGcBias.txt CHART_OUTPUT=lib_180.collectGcBias.pdf ASSUME_SORTED=true VALIDATION_STRINGENCY=LENIENT TMP_DIR=/scratch
+2015-02-23 15:29:45
+java -Xmx16g -XX:PermSize=2g -jar /sw/apps/bioinfo/picard/1.92/milou/CollectGcBiasMetrics.jar REFERENCE_SEQUENCE=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/reference/V.Passoth_13.scf.fasta INPUT=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/lib_3000/lib_3000.bam OUTPUT=lib_3000.collectGcBias.txt CHART_OUTPUT=lib_3000.collectGcBias.pdf ASSUME_SORTED=true VALIDATION_STRINGENCY=LENIENT TMP_DIR=/scratch
+2015-02-23 15:32:13
+java -Xmx16g -XX:PermSize=2g -jar /sw/apps/bioinfo/picard/1.92/milou/CollectInsertSizeMetrics.jar INPUT=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/lib_180/lib_180.bam MINIMUM_PCT=0 HISTOGRAM_FILE=lib_180.collectInsertSize.pdf OUTPUT=lib_180.collectInsertSize.txt HISTOGRAM_WIDTH=360 VALIDATION_STRINGENCY=LENIENT TMP_DIR=/scratch
+2015-02-23 15:34:36
+java -Xmx16g -XX:PermSize=2g -jar /sw/apps/bioinfo/picard/1.92/milou/CollectInsertSizeMetrics.jar INPUT=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/lib_3000/lib_3000.bam MINIMUM_PCT=0 HISTOGRAM_FILE=lib_3000.collectInsertSize.pdf OUTPUT=lib_3000.collectInsertSize.txt HISTOGRAM_WIDTH=6000 VALIDATION_STRINGENCY=LENIENT TMP_DIR=/scratch
+2015-02-23 15:36:30
+java -Xmx16g -XX:PermSize=3g -jar /sw/apps/bioinfo/picard/1.92/milou/MarkDuplicates.jar INPUT=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/lib_180/lib_180.bam OUTPUT=lib_180_noDup.bam METRICS_FILE=lib_180.markDuplicates.txt ASSUME_SORTED=true VALIDATION_STRINGENCY=LENIENT TMP_DIR=/scratch
+2015-02-23 16:02:50
+java -Xmx16g -XX:PermSize=3g -jar /sw/apps/bioinfo/picard/1.92/milou/MarkDuplicates.jar INPUT=/gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/lib_3000/lib_3000.bam OUTPUT=lib_3000_noDup.bam METRICS_FILE=lib_3000.markDuplicates.txt ASSUME_SORTED=true VALIDATION_STRINGENCY=LENIENT TMP_DIR=/scratch
+2015-02-23 16:25:34
+/proj/a2010002/nobackup/sw/mf/bioinfo-tools/misc/qaTools/qaCompute -m -q 0 -i /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/lib_180/lib_180.bam lib_180.bam.cov
+2015-02-23 16:26:47
+/proj/a2010002/nobackup/sw/mf/bioinfo-tools/misc/FRC_align/bin/FRC --pe-sam /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/lib_180/lib_180.bam --pe-max-insert 5000 --mp-sam /gulo/proj_nobackup/a2012043/private/projects/denovo/V.Passoth_13/05-evaluation/V.Passoth_13/V.Passoth_13/abyss/alignments/lib_3000/lib_3000.bam --mp-max-insert 25000 --genome-size 14717419 --output V.Passoth_13

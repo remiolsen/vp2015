@@ -1,0 +1,617 @@
+/opt/openmpi/1.4.5gcc4.6/bin/mpirun -np 16 ABYSS-P -k60 -q3  --coverage-hist=coverage.hist -s V.Passoth_13-bubbles.fa  -o V.Passoth_13-1.fa /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_2.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_trimmed/1_130912_AH0TW4ADXX_P658_101_dual88_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_trimmed/1_130912_AH0TW4ADXX_P658_101_dual88_2.fastq.gz 
+ABySS 1.3.5
+ABYSS-P -k60 -q3 --coverage-hist=coverage.hist -s V.Passoth_13-bubbles.fa -o V.Passoth_13-1.fa /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_2.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_trimmed/1_130912_AH0TW4ADXX_P658_101_dual88_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_trimmed/1_130912_AH0TW4ADXX_P658_101_dual88_2.fastq.gz
+Running on 16 processors
+0: Running on host m121.uppmax.uu.se
+8: Running on host m121.uppmax.uu.se
+5: Running on host m121.uppmax.uu.se
+7: Running on host m121.uppmax.uu.se
+13: Running on host m121.uppmax.uu.se
+15: Running on host m121.uppmax.uu.se
+2: Running on host m121.uppmax.uu.se
+6: Running on host m121.uppmax.uu.se
+4: Running on host m121.uppmax.uu.se
+11: Running on host m121.uppmax.uu.se
+14: Running on host m121.uppmax.uu.se
+1: Running on host m121.uppmax.uu.se
+9: Running on host m121.uppmax.uu.se
+10: Running on host m121.uppmax.uu.se
+3: Running on host m121.uppmax.uu.se
+12: Running on host m121.uppmax.uu.se
+0: Reading `/proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_1.fastq.gz'...
+2: Reading `/proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_trimmed/1_130912_AH0TW4ADXX_P658_101_dual88_1.fastq.gz'...
+1: Reading `/proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_2.fastq.gz'...
+3: Reading `/proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_trimmed/1_130912_AH0TW4ADXX_P658_101_dual88_2.fastq.gz'...
+14: Loaded 22762606 k-mer.
+15: Loaded 22723584 k-mer.
+10: Loaded 22727796 k-mer.
+3: Loaded 22723633 k-mer.
+6: Loaded 22740817 k-mer.
+8: Loaded 22733373 k-mer.
+0: Loaded 22703626 k-mer.
+5: Loaded 22721424 k-mer.
+12: Loaded 22709116 k-mer.
+2: Loaded 22749437 k-mer.
+9: Loaded 22735036 k-mer.
+4: Loaded 22737776 k-mer.
+1: Loaded 22729737 k-mer.
+7: Loaded 22736881 k-mer.
+11: Loaded 22725380 k-mer.
+13: Loaded 22726089 k-mer.
+Loaded 363686311 k-mer. At least 8.73 GB of RAM is required.
+Minimum k-mer coverage is 35
+Using a coverage threshold of 16...
+The median k-mer coverage is 242
+The reconstruction is 16161632
+The k-mer coverage threshold is 15.5563
+Setting parameter e (erode) to 16
+Setting parameter E (erodeStrand) to 1
+Setting parameter c (coverage) to 15.5563
+Finding adjacenct k-mer...
+14: Added 45532886 edges.
+15: Added 45453394 edges.
+10: Added 45459433 edges.
+3: Added 45453831 edges.
+6: Added 45489932 edges.
+8: Added 45473691 edges.
+13: Added 45458399 edges.
+5: Added 45448510 edges.
+12: Added 45421926 edges.
+2: Added 45506550 edges.
+9: Added 45474109 edges.
+4: Added 45481888 edges.
+1: Added 45464320 edges.
+7: Added 45479254 edges.
+11: Added 45458058 edges.
+0: Added 45414616 edges.
+Added 727470797 edges.
+Eroding tips...
+14: Eroded 13449223 tips.
+9: Eroded 13548014 tips.
+13: Eroded 13802175 tips.
+2: Eroded 14996632 tips.
+15: Eroded 15046615 tips.
+8: Eroded 15750366 tips.
+3: Eroded 15968503 tips.
+5: Eroded 16531026 tips.
+1: Eroded 16696976 tips.
+11: Eroded 17940613 tips.
+0: Eroded 19338574 tips.
+12: Eroded 19722663 tips.
+7: Eroded 20335138 tips.
+6: Eroded 20776691 tips.
+10: Eroded 21113749 tips.
+4: Eroded 21155174 tips.
+1: Eroded 4466050 tips.
+11: Eroded 3216771 tips.
+2: Eroded 6181830 tips.
+6: Eroded 393528 tips.
+8: Eroded 5411468 tips.
+7: Eroded 831213 tips.
+15: Eroded 6110182 tips.
+9: Eroded 7619279 tips.
+3: Eroded 5186005 tips.
+0: Eroded 1795329 tips.
+Eroded 338582199 tips.
+13: Eroded 7355247 tips.
+14: Eroded 7741419 tips.
+10: Eroded 46148 tips.
+5: Eroded 4622560 tips.
+12: Eroded 1420688 tips.
+4: Eroded 12350 tips.
+Pruning tips shorter than 1 bp...
+12: Pruned 12 tips.
+9: Pruned 7 tips.
+5: Pruned 6 tips.
+7: Pruned 5 tips.
+15: Pruned 7 tips.
+13: Pruned 8 tips.
+14: Pruned 7 tips.
+2: Pruned 6 tips.
+8: Pruned 10 tips.
+0: Pruned 8 tips.
+1: Pruned 13 tips.
+3: Pruned 6 tips.
+11: Pruned 6 tips.
+6: Pruned 8 tips.
+4: Pruned 9 tips.
+10: Pruned 9 tips.
+Pruned 127 k-mer in 127 tips.
+Pruning tips shorter than 2 bp...
+8: Pruned 6 tips.
+14: Pruned 2 tips.
+2: Pruned 3 tips.
+5: Pruned 4 tips.
+7: Pruned 5 tips.
+15: Pruned 3 tips.
+13: Pruned 3 tips.
+9: Pruned 6 tips.
+12: Pruned 2 tips.
+3: Pruned 3 tips.
+1: Pruned 3 tips.
+0: Pruned 5 tips.
+11: Pruned 2 tips.
+6: Pruned 2 tips.
+10: Pruned 3 tips.
+4: Pruned 5 tips.
+Pruned 80 k-mer in 57 tips.
+Pruning tips shorter than 4 bp...
+12: Pruned 3 tips.
+8: Pruned 6 tips.
+9: Pruned 4 tips.
+3: Pruned 6 tips.
+15: Pruned 5 tips.
+13: Pruned 5 tips.
+14: Pruned 4 tips.
+7: Pruned 6 tips.
+0: Pruned 5 tips.
+1: Pruned 3 tips.
+5: Pruned 6 tips.
+4: Pruned 7 tips.
+2: Pruned 6 tips.
+11: Pruned 7 tips.
+10: Pruned 7 tips.
+6: Pruned 6 tips.
+Pruned 191 k-mer in 86 tips.
+Pruning tips shorter than 8 bp...
+12: Pruned 6 tips.
+5: Pruned 10 tips.
+9: Pruned 9 tips.
+2: Pruned 5 tips.
+14: Pruned 7 tips.
+15: Pruned 7 tips.
+13: Pruned 4 tips.
+8: Pruned 8 tips.
+7: Pruned 3 tips.
+1: Pruned 6 tips.
+3: Pruned 8 tips.
+0: Pruned 2 tips.
+6: Pruned 11 tips.
+10: Pruned 7 tips.
+4: Pruned 0 tips.
+11: Pruned 16 tips.
+Pruned 398 k-mer in 109 tips.
+Pruning tips shorter than 16 bp...
+15: Pruned 8 tips.
+7: Pruned 5 tips.
+9: Pruned 9 tips.
+12: Pruned 10 tips.
+5: Pruned 7 tips.
+8: Pruned 10 tips.
+13: Pruned 8 tips.
+2: Pruned 5 tips.
+14: Pruned 9 tips.
+3: Pruned 7 tips.
+1: Pruned 6 tips.
+0: Pruned 10 tips.
+11: Pruned 8 tips.
+6: Pruned 7 tips.
+10: Pruned 4 tips.
+4: Pruned 11 tips.
+Pruned 967 k-mer in 124 tips.
+Pruning tips shorter than 32 bp...
+5: Pruned 9 tips.
+15: Pruned 7 tips.
+8: Pruned 7 tips.
+13: Pruned 9 tips.
+14: Pruned 9 tips.
+11: Pruned 14 tips.
+0: Pruned 10 tips.
+9: Pruned 9 tips.
+6: Pruned 9 tips.
+12: Pruned 8 tips.
+7: Pruned 11 tips.
+2: Pruned 10 tips.
+3: Pruned 14 tips.
+4: Pruned 10 tips.
+1: Pruned 7 tips.
+10: Pruned 10 tips.
+Pruned 2349 k-mer in 153 tips.
+Pruning tips shorter than 60 bp...
+13: Pruned 5 tips.
+5: Pruned 8 tips.
+14: Pruned 9 tips.
+8: Pruned 5 tips.
+2: Pruned 6 tips.
+15: Pruned 5 tips.
+3: Pruned 13 tips.
+0: Pruned 3 tips.
+9: Pruned 6 tips.
+12: Pruned 8 tips.
+7: Pruned 12 tips.
+11: Pruned 8 tips.
+10: Pruned 6 tips.
+4: Pruned 5 tips.
+6: Pruned 8 tips.
+1: Pruned 7 tips.
+Pruned 3757 k-mer in 114 tips.
+Pruning tips shorter than 60 bp...
+5: Pruned 0 tips.
+2: Pruned 0 tips.
+8: Pruned 0 tips.
+14: Pruned 0 tips.
+3: Pruned 0 tips.
+15: Pruned 0 tips.
+0: Pruned 0 tips.
+7: Pruned 0 tips.
+11: Pruned 0 tips.
+13: Pruned 0 tips.
+4: Pruned 0 tips.
+9: Pruned 0 tips.
+6: Pruned 0 tips.
+10: Pruned 0 tips.
+1: Pruned 0 tips.
+12: Pruned 0 tips.
+Pruned 770 tips in 7 rounds.
+Marking ambiguous branches...
+13: Marked 54285 edges of 26109 ambiguous vertices.
+12: Marked 53779 edges of 25863 ambiguous vertices.
+14: Marked 54244 edges of 26124 ambiguous vertices.
+9: Marked 53972 edges of 25953 ambiguous vertices.
+8: Marked 55002 edges of 26410 ambiguous vertices.
+2: Marked 54822 edges of 26314 ambiguous vertices.
+3: Marked 54094 edges of 25944 ambiguous vertices.
+7: Marked 54061 edges of 25959 ambiguous vertices.
+5: Marked 53500 edges of 25725 ambiguous vertices.
+1: Marked 53549 edges of 25766 ambiguous vertices.
+0: Marked 54413 edges of 26492 ambiguous vertices.
+6: Marked 54107 edges of 26021 ambiguous vertices.
+11: Marked 54020 edges of 25987 ambiguous vertices.
+15: Marked 54027 edges of 25869 ambiguous vertices.
+4: Marked 54215 edges of 26061 ambiguous vertices.
+Marked 416169 ambiguous branches.
+Removing low-coverage contigs (mean k-mer coverage < 15.5563)...
+10: Marked 53124 edges of 25572 ambiguous vertices.
+12: Found 1563525 k-mer in 34617 contigs before removing low-coverage contigs.
+Removed 556635 k-mer in 10817 low-coverage contigs.
+3: Found 1564990 k-mer in 34735 contigs before removing low-coverage contigs.
+Removed 563494 k-mer in 10969 low-coverage contigs.
+9: Found 1579729 k-mer in 35107 contigs before removing low-coverage contigs.
+Removed 562412 k-mer in 10971 low-coverage contigs.
+13: Found 1552310 k-mer in 34519 contigs before removing low-coverage contigs.
+Removed 551261 k-mer in 10609 low-coverage contigs.
+1: Found 1588689 k-mer in 34896 contigs before removing low-coverage contigs.
+Removed 567333 k-mer in 10838 low-coverage contigs.
+14: Found 1574355 k-mer in 34664 contigs before removing low-coverage contigs.
+Removed 560834 k-mer in 10735 low-coverage contigs.
+2: Found 1568508 k-mer in 34934 contigs before removing low-coverage contigs.
+Removed 567493 k-mer in 11047 low-coverage contigs.
+8: Found 1585615 k-mer in 35291 contigs before removing low-coverage contigs.
+Removed 575181 k-mer in 11219 low-coverage contigs.
+0: Found 1541100 k-mer in 34902 contigs before removing low-coverage contigs.
+Removed 552770 k-mer in 11078 low-coverage contigs.
+11: Found 1572720 k-mer in 34764 contigs before removing low-coverage contigs.
+Removed 560563 k-mer in 10781 low-coverage contigs.
+15: Found 1593471 k-mer in 34920 contigs before removing low-coverage contigs.
+Removed 572270 k-mer in 10990 low-coverage contigs.
+4: Found 1547209 k-mer in 34430 contigs before removing low-coverage contigs.
+Removed 541882 k-mer in 10667 low-coverage contigs.
+6: Found 1560275 k-mer in 34918 contigs before removing low-coverage contigs.
+Removed 556102 k-mer in 10858 low-coverage contigs.
+10: Found 1556069 k-mer in 34565 contigs before removing low-coverage contigs.
+Removed 559309 k-mer in 10930 low-coverage contigs.
+5: Found 1564429 k-mer in 34636 contigs before removing low-coverage contigs.
+Removed 560905 k-mer in 10969 low-coverage contigs.
+Found 25096094 k-mer in 556771 contigs before removing low-coverage contigs.
+Removed 8975572 k-mer in 174415 low-coverage contigs.
+Splitting ambiguous branches...
+7: Found 1583100 k-mer in 34873 contigs before removing low-coverage contigs.
+Removed 567128 k-mer in 10937 low-coverage contigs.
+7: Split 21821 ambigiuous branches.
+9: Split 21706 ambigiuous branches.
+14: Split 21614 ambigiuous branches.
+12: Split 21541 ambigiuous branches.
+15: Split 22000 ambigiuous branches.
+13: Split 21645 ambigiuous branches.
+8: Split 22026 ambigiuous branches.
+5: Split 21739 ambigiuous branches.
+2: Split 21805 ambigiuous branches.
+3: Split 21883 ambigiuous branches.
+0: Split 22304 ambigiuous branches.
+1: Split 21724 ambigiuous branches.
+6: Split 21719 ambigiuous branches.
+11: Split 21624 ambigiuous branches.
+4: Split 21512 ambigiuous branches.
+Split 348322 ambiguous branches.
+10: Split 21659 ambigiuous branches.
+Removed 8975572 marked k-mer.
+Eroding tips...
+14: Eroded 18 tips.
+7: Eroded 17 tips.
+9: Eroded 15 tips.
+12: Eroded 33 tips.
+13: Eroded 23 tips.
+15: Eroded 29 tips.
+2: Eroded 22 tips.
+3: Eroded 32 tips.
+1: Eroded 31 tips.
+0: Eroded 42 tips.
+5: Eroded 30 tips.
+8: Eroded 42 tips.
+11: Eroded 41 tips.
+6: Eroded 46 tips.
+4: Eroded 40 tips.
+10: Eroded 66 tips.
+7: Eroded 290 tips.
+5: Eroded 271 tips.
+14: Eroded 306 tips.
+3: Eroded 285 tips.
+1: Eroded 275 tips.
+9: Eroded 275 tips.
+12: Eroded 304 tips.
+8: Eroded 289 tips.
+2: Eroded 310 tips.
+13: Eroded 285 tips.
+11: Eroded 251 tips.
+15: Eroded 308 tips.
+0: Eroded 274 tips.
+Eroded 5101 tips.
+6: Eroded 276 tips.
+4: Eroded 279 tips.
+10: Eroded 296 tips.
+Pruning tips shorter than 1 bp...
+7: Pruned 4 tips.
+5: Pruned 7 tips.
+9: Pruned 4 tips.
+12: Pruned 8 tips.
+13: Pruned 7 tips.
+14: Pruned 4 tips.
+15: Pruned 4 tips.
+2: Pruned 4 tips.
+3: Pruned 4 tips.
+1: Pruned 6 tips.
+8: Pruned 7 tips.
+0: Pruned 2 tips.
+11: Pruned 5 tips.
+6: Pruned 6 tips.
+4: Pruned 6 tips.
+10: Pruned 10 tips.
+Pruned 88 k-mer in 88 tips.
+Pruning tips shorter than 2 bp...
+7: Pruned 5 tips.
+13: Pruned 3 tips.
+9: Pruned 2 tips.
+15: Pruned 2 tips.
+12: Pruned 4 tips.
+14: Pruned 2 tips.
+8: Pruned 2 tips.
+2: Pruned 1 tips.
+5: Pruned 0 tips.
+3: Pruned 1 tips.
+0: Pruned 1 tips.
+1: Pruned 1 tips.
+6: Pruned 0 tips.
+10: Pruned 2 tips.
+4: Pruned 2 tips.
+11: Pruned 1 tips.
+Pruned 54 k-mer in 29 tips.
+Pruning tips shorter than 4 bp...
+14: Pruned 2 tips.
+7: Pruned 4 tips.
+2: Pruned 2 tips.
+13: Pruned 1 tips.
+9: Pruned 1 tips.
+12: Pruned 2 tips.
+8: Pruned 3 tips.
+5: Pruned 5 tips.
+15: Pruned 3 tips.
+3: Pruned 2 tips.
+1: Pruned 0 tips.
+0: Pruned 2 tips.
+6: Pruned 3 tips.
+11: Pruned 1 tips.
+10: Pruned 8 tips.
+4: Pruned 3 tips.
+Pruned 123 k-mer in 42 tips.
+Pruning tips shorter than 8 bp...
+2: Pruned 3 tips.
+13: Pruned 1 tips.
+5: Pruned 1 tips.
+9: Pruned 3 tips.
+14: Pruned 2 tips.
+12: Pruned 4 tips.
+15: Pruned 4 tips.
+8: Pruned 4 tips.
+7: Pruned 0 tips.
+3: Pruned 5 tips.
+0: Pruned 3 tips.
+1: Pruned 1 tips.
+6: Pruned 4 tips.
+4: Pruned 1 tips.
+11: Pruned 3 tips.
+10: Pruned 3 tips.
+Pruned 234 k-mer in 42 tips.
+Pruning tips shorter than 16 bp...
+7: Pruned 3 tips.
+9: Pruned 2 tips.
+14: Pruned 2 tips.
+8: Pruned 1 tips.
+2: Pruned 3 tips.
+13: Pruned 1 tips.
+5: Pruned 1 tips.
+0: Pruned 2 tips.
+12: Pruned 5 tips.
+15: Pruned 3 tips.
+3: Pruned 4 tips.
+10: Pruned 4 tips.
+1: Pruned 4 tips.
+6: Pruned 0 tips.
+4: Pruned 0 tips.
+11: Pruned 3 tips.
+Pruned 457 k-mer in 38 tips.
+Pruning tips shorter than 32 bp...
+12: Pruned 4 tips.
+5: Pruned 2 tips.
+3: Pruned 4 tips.
+7: Pruned 3 tips.
+0: Pruned 4 tips.
+15: Pruned 7 tips.
+8: Pruned 6 tips.
+2: Pruned 6 tips.
+1: Pruned 1 tips.
+13: Pruned 4 tips.
+9: Pruned 1 tips.
+6: Pruned 7 tips.
+11: Pruned 5 tips.
+14: Pruned 4 tips.
+10: Pruned 3 tips.
+4: Pruned 3 tips.
+Pruned 1457 k-mer in 64 tips.
+Pruning tips shorter than 60 bp...
+13: Pruned 10 tips.
+5: Pruned 6 tips.
+15: Pruned 4 tips.
+2: Pruned 3 tips.
+8: Pruned 4 tips.
+3: Pruned 4 tips.
+7: Pruned 6 tips.
+12: Pruned 5 tips.
+6: Pruned 4 tips.
+0: Pruned 2 tips.
+11: Pruned 3 tips.
+4: Pruned 6 tips.
+14: Pruned 9 tips.
+1: Pruned 8 tips.
+9: Pruned 4 tips.
+10: Pruned 8 tips.
+Pruned 3636 k-mer in 86 tips.
+Pruning tips shorter than 60 bp...
+7: Pruned 0 tips.
+13: Pruned 0 tips.
+12: Pruned 0 tips.
+8: Pruned 0 tips.
+5: Pruned 0 tips.
+2: Pruned 0 tips.
+15: Pruned 0 tips.
+1: Pruned 0 tips.
+3: Pruned 0 tips.
+14: Pruned 0 tips.
+0: Pruned 0 tips.
+6: Pruned 0 tips.
+10: Pruned 0 tips.
+11: Pruned 0 tips.
+9: Pruned 0 tips.
+4: Pruned 0 tips.
+Pruned 389 tips in 7 rounds.
+Popping bubbles...
+0: Removed 3184 bubbles.
+1: Removed 2877 bubbles.
+2: Removed 2777 bubbles.
+3: Removed 2450 bubbles.
+4: Removed 2288 bubbles.
+5: Removed 2191 bubbles.
+6: Removed 1783 bubbles.
+7: Removed 1601 bubbles.
+8: Removed 1450 bubbles.
+9: Removed 1278 bubbles.
+10: Removed 1055 bubbles.
+11: Removed 854 bubbles.
+12: Removed 711 bubbles.
+13: Removed 501 bubbles.
+14: Removed 273 bubbles.
+15: Removed 99 bubbles.
+Removed 25372 bubbles.
+Removed 25372 bubbles.
+Marking ambiguous branches...
+13: Marked 3215 edges of 1590 ambiguous vertices.
+9: Marked 3173 edges of 1579 ambiguous vertices.
+12: Marked 3367 edges of 1662 ambiguous vertices.
+8: Marked 3375 edges of 1674 ambiguous vertices.
+7: Marked 3163 edges of 1574 ambiguous vertices.
+14: Marked 3365 edges of 1675 ambiguous vertices.
+5: Marked 3204 edges of 1594 ambiguous vertices.
+2: Marked 3379 edges of 1684 ambiguous vertices.
+3: Marked 3245 edges of 1610 ambiguous vertices.
+0: Marked 3214 edges of 1604 ambiguous vertices.
+1: Marked 3334 edges of 1656 ambiguous vertices.
+6: Marked 3331 edges of 1658 ambiguous vertices.
+11: Marked 3289 edges of 1630 ambiguous vertices.
+4: Marked 3358 edges of 1664 ambiguous vertices.
+10: Marked 3253 edges of 1614 ambiguous vertices.
+15: Marked 3339 edges of 1645 ambiguous vertices.
+Marked 26113 ambiguous branches.
+Assembling...
+12: Assembled 831377 k-mer in 2273 contigs.
+8: Assembled 831889 k-mer in 2396 contigs.
+4: Assembled 750610 k-mer in 2244 contigs.
+3: Assembled 874003 k-mer in 2215 contigs.
+14: Assembled 814308 k-mer in 2270 contigs.
+5: Assembled 891249 k-mer in 2161 contigs.
+11: Assembled 755405 k-mer in 2251 contigs.
+13: Assembled 990191 k-mer in 2262 contigs.
+15: Assembled 829222 k-mer in 2268 contigs.
+2: Assembled 978573 k-mer in 2311 contigs.
+10: Assembled 862875 k-mer in 2257 contigs.
+9: Assembled 984776 k-mer in 2277 contigs.
+0: Assembled 990332 k-mer in 2368 contigs.
+1: Assembled 1170708 k-mer in 2413 contigs.
+7: Assembled 880285 k-mer in 2251 contigs.
+6: Assembled 882022 k-mer in 2346 contigs.
+Assembled 14317825 k-mer in 36563 contigs.
+Concatenating to V.Passoth_13-1.fa
+Concatenating to V.Passoth_13-bubbles.fa
+Done.
+AdjList  -k60 -m50 V.Passoth_13-1.fa >V.Passoth_13-1.adj
+abyss-filtergraph  -k60 -g V.Passoth_13-2.adj V.Passoth_13-1.adj >V.Passoth_13-1.path
+PopBubbles  -j16 -k60 -p0.9  -g V.Passoth_13-3.adj V.Passoth_13-1.fa V.Passoth_13-2.adj >V.Passoth_13-2.path
+MergeContigs  -k60 -o V.Passoth_13-3.fa V.Passoth_13-1.fa V.Passoth_13-2.adj V.Passoth_13-2.path
+awk '!/^>/ {x[">" $1]=1; next} {getline s} $1 in x {print $0 "\n" s}' \
+		V.Passoth_13-2.path V.Passoth_13-1.fa >V.Passoth_13-indel.fa
+ln -sf V.Passoth_13-3.fa V.Passoth_13-unitigs.fa
+abyss-map  -j16 -l60   /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_01/P568_101_dual87/results/fastq_trimmed/1_130912_AH0TW4ADXX_P568_101_dual87_2.fastq.gz V.Passoth_13-3.fa \
+		|abyss-fixmate  -l60  -h lib180-3.hist \
+		|sort -snk3 -k4 \
+		|DistanceEst  -j16 -k60 -l60 -s200 -n10   -o lib180-3.dist lib180-3.hist
+abyss-map  -j16 -l60   /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_trimmed/1_130912_AH0TW4ADXX_P658_101_dual88_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_02/P658_101_dual88/results/fastq_trimmed/1_130912_AH0TW4ADXX_P658_101_dual88_2.fastq.gz V.Passoth_13-3.fa \
+		|abyss-fixmate  -l60  -h lib500-3.hist \
+		|sort -snk3 -k4 \
+		|DistanceEst  -j16 -k60 -l60 -s200 -n10   -o lib500-3.dist lib500-3.hist
+abyss-todot  --dist -e V.Passoth_13-3.fa lib180-3.dist lib500-3.dist >V.Passoth_13-3.dist
+Overlap   -k60 -g V.Passoth_13-4.adj -o V.Passoth_13-4.fa V.Passoth_13-3.fa V.Passoth_13-3.adj V.Passoth_13-3.dist
+Overlap: 176
+Scaffold: 36
+No overlap: 23
+Insignificant (<5bp): 9
+Homopolymer: 200
+Motif: 0
+Ambiguous: 42
+SimpleGraph    -j16 -k60 -o V.Passoth_13-4.path1 V.Passoth_13-4.adj V.Passoth_13-3.dist
+Total paths attempted: 6474
+Unique path: 2627
+No possible paths: 3686
+No valid paths: 5
+Repetitive: 0
+Multiple valid paths: 141
+Too many solutions: 4
+Too complex: 11
+
+The minimum number of pairs in a distance estimate is 10.
+The minimum number of pairs used in a path is 10.
+MergePaths   -j16 -k60 -o V.Passoth_13-4.path2 V.Passoth_13-4.adj V.Passoth_13-4.path1
+PathOverlap --assemble  -k60 V.Passoth_13-4.adj V.Passoth_13-4.path2 >V.Passoth_13-4.path3
+cat V.Passoth_13-3.fa V.Passoth_13-4.fa \
+		|PathConsensus  -k60 -p0.9 -o V.Passoth_13-5.path -s V.Passoth_13-5.fa -g V.Passoth_13-5.adj - V.Passoth_13-4.adj V.Passoth_13-4.path3
+cat V.Passoth_13-3.fa V.Passoth_13-4.fa V.Passoth_13-5.fa |MergeContigs  -k60 -o V.Passoth_13-6.fa - V.Passoth_13-5.adj V.Passoth_13-5.path
+ln -sf V.Passoth_13-6.fa V.Passoth_13-contigs.fa
+PathOverlap --overlap  --dot -k60 V.Passoth_13-5.adj V.Passoth_13-5.path >V.Passoth_13-6.dot
+ln -sf V.Passoth_13-6.dot V.Passoth_13-contigs.dot
+abyss-map  -j16 -l60   /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_101_index2dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_101_index2dual_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_101_index2dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_101_index2dual_2.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_102_index4dual_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_03/P659_102_index4dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P659_102_index4dual_2.fastq.gz V.Passoth_13-6.fa \
+		|abyss-fixmate  -l60  -h lib3000-6.hist \
+		|sort -snk3 -k4 \
+		|DistanceEst --dot  -j16 -k60 -l60 -s200 -n10   -o lib3000-6.dist.dot lib3000-6.hist
+abyss-map  -j16 -l60   /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_04/P660_102_index6dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P660_102_index6dual_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_04/P660_102_index6dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P660_102_index6dual_2.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_04/P660_101_index5dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P660_101_index5dual_1.fastq.gz /proj/a2012043/nobackup/private/projects/denovo/V.Passoth_13/01-QC/V.Passoth_13_04/P660_101_index5dual/results/fastq_trimmed/1_130912_AH0TW4ADXX_P660_101_index5dual_2.fastq.gz V.Passoth_13-6.fa \
+		|abyss-fixmate  -l60  -h lib6000-6.hist \
+		|sort -snk3 -k4 \
+		|DistanceEst --dot  -j16 -k60 -l60 -s200 -n10   -o lib6000-6.dist.dot lib6000-6.hist
+abyss-scaffold  -k60 -s200 -n10 -g V.Passoth_13-6.path.dot  V.Passoth_13-6.dot lib3000-6.dist.dot lib6000-6.dist.dot >V.Passoth_13-6.path
+PathConsensus  -k60 -p0.9 -s V.Passoth_13-7.fa -g V.Passoth_13-7.adj -o V.Passoth_13-7.path V.Passoth_13-6.fa V.Passoth_13-6.dot V.Passoth_13-6.path
+cat V.Passoth_13-6.fa V.Passoth_13-7.fa \
+		|MergeContigs  -k60 -o V.Passoth_13-8.fa - V.Passoth_13-7.adj V.Passoth_13-7.path
+ln -sf V.Passoth_13-8.fa V.Passoth_13-scaffolds.fa
+PathOverlap --overlap  --dot -k60 V.Passoth_13-7.adj V.Passoth_13-7.path >V.Passoth_13-8.dot
+ln -sf V.Passoth_13-8.dot V.Passoth_13-scaffolds.dot
+abyss-fac  V.Passoth_13-unitigs.fa V.Passoth_13-contigs.fa V.Passoth_13-scaffolds.fa |tee V.Passoth_13-stats
+n	n:500	n:N50	min	N80	N50	N20	max	sum
+10885	1823	241	500	5244	13977	31132	91934	12.44e6	V.Passoth_13-unitigs.fa
+7744	1685	246	506	7791	17946	44608	514609	17.82e6	V.Passoth_13-contigs.fa
+6523	1131	117	512	11798	30575	116312	581071	17.72e6	V.Passoth_13-scaffolds.fa
